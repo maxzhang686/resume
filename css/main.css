@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+.header {
+  height: 99vh;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.655), rgba(26, 25, 25, 0.808)), url("../img/background1.JPG");
+  background-position: center;
+  /* clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.heading__content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (min-width: 31rem) {
+  .heading__content-box {
+    width: 100%;
+  }
+}
+
+.heading__content--name {
+  display: block;
+  font-weight: 900;
+  font-size: 4rem;
+  color: white;
+  text-transform: uppercase;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+
+.heading__content--title {
+  font-weight: normal;
+  font-size: 1.25rem;
+  display: block;
+  color: #f78e43;
+  animation-name: moveInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  80% {
+    transform: translateX(10);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  80% {
+    transform: translateX(-10);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-list ul {
+  position: relative;
+  display: flex;
+}
+.icon-list ul li {
+  position: relative;
+  list-style: none;
+}
+.icon-list ul li a {
+  height: 50px;
+  width: 50px;
+  background: #18191f;
+  line-height: 55px;
+  text-align: center;
+  margin: 0 15px;
+  border-radius: 15px;
+  box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05), 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.icon-list ul li a .fa {
+  font-size: 25px;
+  color: #555;
+}
+.icon-list ul li a:hover .fa {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+}
+.icon-list ul li:nth-child(3) a .fa {
+  font-size: 22px;
+}
+.icon-list ul li:nth-child(2) a:hover .fa {
+  color: #f00;
+  text-shadow: 0 0 15px #f00;
+}
+.icon-list ul li:nth-child(3) a:hover .fa {
+  color: #ff0;
+  text-shadow: 0 0 15px #ff0;
+}
+.icon-list ul li:nth-child(4) a:hover .fa {
+  color: #0f0;
+  text-shadow: 0 0 15px #0f0;
+}
+
+.area {
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.824);
+  animation: animate 25s linear infinite;
+  top: -150px;
+}
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  filter: blur(2px);
+}
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  filter: blur(2px);
+}
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+  filter: blur(2px);
+}
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  filter: blur(2px);
+}
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+  filter: blur(2px);
+}
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 3s;
+  filter: blur(2px);
+}
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 7s;
+  filter: blur(2px);
+}
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  filter: blur(2px);
+}
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  border-radius: 0px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  filter: blur(2px);
+}
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  filter: blur(2px);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateY(1000px) rotate(0deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+.main-nav {
+  position: fixed;
+  top: 0;
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.main-nav__items {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav__item {
+  margin: auto 1rem;
+}
+.main-nav__item a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (min-width: 31rem) {
+  .main-nav__item a {
+    font-size: 1.2rem;
+  }
+}
+.main-nav__item a:hover {
+  color: #f78e43;
+}
+
+#project {
+  height: 1000px;
+}
+
+#skill {
+  top: -3rem;
+  position: relative;
+  padding-top: 3rem;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 1.7;
+  color: #fff;
+  text-align: center;
+}
+
+.skill__content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.skill__content .introduce {
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #fff;
+  width: 50vw;
+  max-width: 36rem;
+}
+.skill__content .skill {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 50vw;
+  max-width: 36rem;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* height: 100%; */
+}
+
+html {
+  /* height: 100%; */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  background-color: rgba(20, 18, 16, 0.99);
+  /* height: 100%; */
+}
+
+/*# sourceMappingURL=main.css.map */

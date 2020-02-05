@@ -1,0 +1,41 @@
+#skill {
+  top: -3rem;
+  position: relative;
+  padding-top: 3rem;
+
+}
+.title {
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 1.7; 
+  color: $color-white;  
+  text-align: center;
+}
+
+.skill__content{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content:center;
+  align-content: center;
+  
+  
+
+  .introduce {
+    padding-left: 16px;
+    padding-right: 16px;
+    color: $color-white;
+    width: 50vw;
+    max-width: 36rem;
+  }
+
+  .skill{
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 50vw;
+    max-width: 36rem;
+    color: $color-white;
+  }
+}

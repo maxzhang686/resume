@@ -1,0 +1,35 @@
+//nav bar 
+.main-nav {
+  position: fixed;
+  top: 0;
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color-black, 0.7);
+  z-index: 100;
+}
+
+.main-nav__items {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav__item {
+  margin: auto 1rem;
+  a {
+    color: rgba($color-white,0.9);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    @media (min-width : 31rem) {
+    font-size: 1.2rem;
+    }
+    &:hover {
+      color: rgba($color-title,1);
+    }
+  }
+  
+}
