@@ -1,5 +1,4 @@
 #project {
-  height: 1000px;
   max-width: 1200px;
   top: -3rem;
   position: relative;
@@ -8,7 +7,10 @@
 }
 
 .project-box {
-  margin-top: 20px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid;
+  border-color: $color-title;
   display: grid;
   width: 100%;
   //justify-content:center;
@@ -76,7 +78,7 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 45px;
-    color: $color-secondary-dark;
+    color: $color-title;
     font-size: 1.15rem; 
     text-decoration: none;
     letter-spacing: 3px;
@@ -97,7 +99,7 @@
       position: absolute;
       width: 10px;
       height: 10px;
-      background:$color-secondary-dark;
+      background:$color-title;
       transition: 1s;
       //mix-blend-mode: hue;
       z-index: -50;
@@ -162,13 +164,16 @@
 .project-detail {
   grid-area: detail;
   align-self: start;
+  p {
+    margin-bottom: 1rem;
+  }
   
 }
 .project-detail__title {
   p {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 25px;
+    line-height: 1.5625rem;
     color: $color-title;
   }
 }
