@@ -2,40 +2,81 @@
   top: -3rem;
   position: relative;
   padding-top: 3rem;
-
-}
-.title {
-  font-weight: 900;
-  font-size: 2.6rem;
-  line-height: 1.7; 
-  color: $color-white;  
-  text-align: center;
 }
 
 .skill__content{
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content:center;
-  align-content: center;
-  
-  
+  align-content: space-between;
+  @media (min-width:40.1rem) {
+    flex-wrap: nowrap;
+  }
+  .card {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    // background-color: rgba(255, 255, 255, 0.8);
+    // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    background:#333;
+    box-shadow: 0 10px 40px rgba(0, 0, 0,0.5);
+    transition: transform .3s; 
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03); 
+    }
+    min-height: 276px;
+  }
+
+  .card1 {
+    @extend .card;  
+  }
+
+  .card2 {
+    @extend .card;
+    
+}
 
   .introduce {
-    padding-left: 16px;
-    padding-right: 16px;
-    color: $color-white;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $color-black;
     width: 50vw;
-    max-width: 36rem;
+    max-width: 32rem;
+    min-width: 20rem;
+    font-size: 1.14rem;
+    line-height: 1.5;
+    @media (max-width:40rem) {
+      padding-bottom: 1.2rem;
+      //border-bottom: solid $color-white;
+    }
+    // p::first-letter {
+    //   font-size: 130%;
+    // }
   }
 
   .skill{
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 50vw;
-    max-width: 36rem;
+    max-width: 32rem;
+    min-width: 20rem;
     color: $color-white;
+    @media (max-width:40rem) {
+      padding-top: 1.2rem;
+
+    }
+
+    span {
+    font-weight: bold;
+    font-size: 1.12rem;
+    }
+
+    p {
+      display: block;
+    }
   }
 }

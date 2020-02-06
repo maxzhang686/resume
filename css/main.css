@@ -266,6 +266,191 @@
 
 #project {
   height: 1000px;
+  max-width: 1200px;
+  top: -3rem;
+  position: relative;
+  padding-top: 3rem;
+  margin: auto;
+}
+
+.project-box {
+  margin-top: 20px;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 24.25%);
+  grid-template-rows: 3rem auto auto auto;
+  grid-gap: 20px 1%;
+  grid-template-areas: "name name name name" "image image detail detail" "btn btn detail detail";
+  background-color: rgba(112, 202, 187, 0.02);
+}
+@media (max-width: 45rem) {
+  .project-box {
+    grid-template-rows: 3rem auto auto auto;
+    grid-template-columns: minmax(20rem, 90%);
+    grid-template-areas: "name" "image" "btn" "detail";
+    justify-content: center;
+  }
+}
+
+.project-name {
+  grid-area: name;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.project__image-container {
+  grid-area: image;
+}
+.project__image-container img {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.project__button-group {
+  grid-area: btn;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 53rem) {
+  .project__button-group {
+    justify-content: center;
+  }
+}
+@media (max-width: 45rem) {
+  .project__button-group {
+    max-width: 320px;
+  }
+}
+
+.btn, .project__button--code a, .project__button--link a {
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  height: 45px;
+  background: #262626;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 45px;
+  color: #ff7730;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+@media (max-width: 53rem) {
+  .btn, .project__button--code a, .project__button--link a {
+    width: 100%;
+    height: 45px;
+  }
+}
+@media (max-width: 20rem) {
+  .btn, .project__button--code a, .project__button--link a {
+    width: 100%;
+    height: 45px;
+  }
+}
+.btn:before, .project__button--code a:before, .project__button--link a:before, .btn:after, .project__button--code a:after, .project__button--link a:after,
+.btn span:before,
+.project__button--code a span:before,
+.project__button--link a span:before,
+.btn span:after,
+.project__button--code a span:after,
+.project__button--link a span:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ff7730;
+  transition: 1s;
+  z-index: -50;
+}
+.btn:before, .project__button--code a:before, .project__button--link a:before {
+  top: -2px;
+  left: -2px;
+}
+.btn:after, .project__button--code a:after, .project__button--link a:after {
+  top: -2px;
+  right: -2px;
+}
+.btn span:before, .project__button--code a span:before, .project__button--link a span:before {
+  bottom: -2px;
+  left: -2px;
+}
+.btn span:after, .project__button--code a span:after, .project__button--link a span:after {
+  bottom: -2px;
+  right: -2px;
+}
+
+.btn:hover:before, .project__button--code a:hover:before, .project__button--link a:hover:before,
+.btn:hover:after,
+.project__button--code a:hover:after,
+.project__button--link a:hover:after,
+.btn:hover span:before,
+.project__button--code a:hover span:before,
+.project__button--link a:hover span:before,
+.btn:hover span:after,
+.project__button--code a:hover span:after,
+.project__button--link a:hover span:after {
+  width: calc(100% / 2 );
+  height: calc(100% / 2);
+}
+
+.project__button--link {
+  text-align: center;
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 53rem) {
+  .project__button--link {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+.project__button--code {
+  text-align: center;
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 53rem) {
+  .project__button--code {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+.project-detail {
+  grid-area: detail;
+  align-self: start;
+}
+
+.project-detail__title p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 25px;
+  color: #f78e43;
+}
+
+.project-detail__list {
+  margin-top: 40px;
+  font-size: 1.1rem;
+}
+
+.isDisabled {
+  cursor: not-allowed;
+}
+
+.isDisabled > a {
+  color: currentColor;
+  display: inline-block;
+  /* For IE11/ MS Edge bug */
+  pointer-events: none;
+  text-decoration: none;
 }
 
 #skill {
@@ -274,36 +459,67 @@
   padding-top: 3rem;
 }
 
-.title {
-  font-weight: 900;
-  font-size: 2.6rem;
-  line-height: 1.7;
-  color: #fff;
-  text-align: center;
-}
-
 .skill__content {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  align-content: center;
+  align-content: space-between;
+}
+@media (min-width: 40.1rem) {
+  .skill__content {
+    flex-wrap: nowrap;
+  }
+}
+.skill__content .card, .skill__content .card2, .skill__content .card1 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  background: #333;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+  min-height: 276px;
+}
+.skill__content .card:hover, .skill__content .card2:hover, .skill__content .card1:hover {
+  transform: translateY(-1.5rem) scale(1.03);
 }
 .skill__content .introduce {
-  padding-left: 16px;
-  padding-right: 16px;
-  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000;
   width: 50vw;
-  max-width: 36rem;
+  max-width: 32rem;
+  min-width: 20rem;
+  font-size: 1.14rem;
+  line-height: 1.5;
+}
+@media (max-width: 40rem) {
+  .skill__content .introduce {
+    padding-bottom: 1.2rem;
+  }
 }
 .skill__content .skill {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 50vw;
-  max-width: 36rem;
+  max-width: 32rem;
+  min-width: 20rem;
   color: #fff;
+}
+@media (max-width: 40rem) {
+  .skill__content .skill {
+    padding-top: 1.2rem;
+  }
+}
+.skill__content .skill span {
+  font-weight: bold;
+  font-size: 1.12rem;
+}
+.skill__content .skill p {
+  display: block;
 }
 
 * {
@@ -311,10 +527,12 @@
   padding: 0;
   box-sizing: border-box;
   /* height: 100%; */
+  color: #fff;
 }
 
 html {
   /* height: 100%; */
+  color: #fff;
 }
 
 body {
@@ -322,8 +540,19 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  background-color: rgba(20, 18, 16, 0.99);
+  background-color: #262626;
+  color: #fff;
   /* height: 100%; */
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 1.7;
+  color: #fff;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #f78e43;
 }
 
 /*# sourceMappingURL=main.css.map */
